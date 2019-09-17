@@ -82,3 +82,13 @@ rocksWarning('Centinela Ave and Olympic Blvd');
 
 // Invoke the other hazard creators you instantiated, too
 
+const movements = [[0, 0], [0, 5], [-1, -3], [-3, 1], [2, -4], [3, 2]];
+function noNegatives(arr) {
+    return (arr[0] >= 0 && arr[1] >= 0);
+}
+
+function noBackOrRight(arr) {
+    return arr.filter(noNegatives);
+}
+
+console.log(noBackOrRight(movements));
