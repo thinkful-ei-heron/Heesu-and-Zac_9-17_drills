@@ -107,3 +107,21 @@ function msg(item, index) {
 }
 
 movement3.forEach(msg);
+
+
+const input = 'noggin oreo the moon time tele steed his tent apollo her lives though shoo tofu budapest';
+const array = input.split(' ');
+
+function decode(total, word) {
+    if (word.length === 3) {
+        total += ' ';
+    }
+    else {
+        total += word[word.length -1].toUpperCase();
+    }
+    return total;
+}
+
+let result = array.reduce(decode, '');
+
+console.log(result);
