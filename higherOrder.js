@@ -90,5 +90,20 @@ function noNegatives(arr) {
 function noBackOrRight(arr) {
     return arr.filter(noNegatives);
 }
+let movement2 = (noBackOrRight(movements));
 
-console.log(noBackOrRight(movements));
+function addNums(arr) {
+    return arr[0] + arr[1]
+;}
+
+function totalSteps(arr) {
+    return arr.map(addNums);
+}
+
+let movement3 = (totalSteps(movement2));
+
+function msg(item, index) {
+    console.log(`Movement #${index + 1}: ${item} steps`)
+}
+
+movement3.forEach(msg);
